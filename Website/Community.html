@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sinners 2 Saints – Free Community</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Archivo+Black&family=Figtree:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#F4EADB; --surface:#FBF5EA; --ink:#2B1015; --muted:#6B4A4E; --line:#DBC8B2; --brand:#6B1426; --on-brand:#F6ECDD; --link:#6B1426; --pop:#E3B15C; --on-pop:#2B1015;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#1C0A0E;--surface:#2A1118;--ink:#F3E6D3;--muted:#C7AFA6;--line:#4A2430;--brand:#7A1A2E;--on-brand:#F6ECDD;--link:#EBA7AF;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#1C0A0E;--surface:#2A1118;--ink:#F3E6D3;--muted:#C7AFA6;--line:#4A2430;--brand:#7A1A2E;--on-brand:#F6ECDD;--link:#EBA7AF;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Figtree","Helvetica Neue",Arial,sans-serif;font-size:1.0625rem;line-height:1.6}
+h1,h2,h3{font-family:"Archivo Black","Helvetica Neue",Arial,sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.01em;margin:0}
+.hero h1,h2{font-family:"Imperial Script","Snell Roundhand",cursive;font-weight:400;letter-spacing:0;line-height:1.1;text-shadow:2px 2px 0 rgba(0,0,0,.22)}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+section{padding:3.5rem 0}
+h2{font-size:clamp(2.4rem,8vw,3.6rem);margin-bottom:.6rem}
+.sub{color:var(--muted);max-width:36rem;margin:0 0 2rem}
+.hero{padding:4rem 0 3.5rem;background:var(--brand);color:var(--on-brand)}
+.hero h1{font-size:clamp(3.4rem,15vw,6.5rem);max-width:14ch}
+.hero p{font-size:1.2rem;color:inherit;opacity:.88;max-width:34rem;margin:1.2rem 0 1.8rem}
+.btn{display:inline-block;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--brand);background:var(--brand);color:var(--on-brand);padding:.75rem 1.4rem;border-radius:.6rem;cursor:pointer}
+.btn.pop{background:var(--pop);border-color:var(--pop);color:var(--on-pop)}
+.btn.ghost{background:transparent;color:var(--link)}
+.btn[aria-disabled="true"]{opacity:.5;cursor:not-allowed}
+header a{color:var(--on-brand);text-decoration:none}
+.hero .btn.ghost{color:var(--on-brand);border-color:var(--on-brand)}
+.row{display:flex;flex-wrap:wrap;gap:.8rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.9rem;padding:1.4rem}
+.card h3{font-size:1.25rem;margin-bottom:.5rem}
+.card p{margin:0;color:var(--muted)}
+.links{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}
+.links a,.links span{display:block;padding:.8rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:.6rem;text-decoration:none;font-weight:500}
+.links span{color:var(--muted)}
+.rules{margin:0;padding-left:1.2rem;max-width:38rem}
+.rules li{margin-bottom:.6rem}
+form{display:flex;flex-wrap:wrap;gap:.7rem;max-width:36rem}
+input{font:inherit;flex:1 1 14rem;padding:.75rem 1rem;border-radius:.6rem;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.band{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.note{font-size:.9rem;color:var(--muted);margin-top:.8rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header style="background:var(--brand);color:var(--on-brand);padding:1.5rem max(1.25rem,calc((100% - 62rem)/2)) 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+  <strong style="font-family:'Imperial Script','Snell Roundhand',cursive;font-size:2.7rem;font-weight:400;line-height:1" id="brand"></strong>
+  <nav class="row" style="gap:1.2rem;font-weight:500"><a href="#perks">What you get</a><a href="#join">Join</a><a href="#rules">House rules</a><a href="#listen">Listen &amp; watch</a></nav>
+</header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <h1>Welcome to the community.</h1>
+  <p>A free space for honest conversation about change, growth, and starting over. Everyone is welcome, no payment needed.</p>
+  <div class="row"><a class="btn pop" href="#join">Join for free</a><a class="btn ghost" href="#subscribe">Get the newsletter</a></div>
+</div></section>
+
+<section id="perks"><div class="wrap">
+  <h2>What you get</h2>
+  <p class="sub">Free members get all of this.</p>
+  <div class="grid" id="perks-grid"></div>
+</div></section>
+
+<section id="join" class="band"><div class="wrap">
+  <h2>Join the conversation</h2>
+  <p class="sub">Pick the place that suits you. You can join more than one.</p>
+  <div class="links" id="join-links"></div>
+</div></section>
+
+<section id="rules"><div class="wrap">
+  <h2>House rules</h2>
+  <ol class="rules">
+    <li>Be kind. Disagree with ideas, never with people.</li>
+    <li>Keep personal stories private. What’s shared here stays here.</li>
+    <li>No spam, no selling, and no promoting your own links.</li>
+    <li>No hate speech, harassment, or threats. We remove it and the people behind it.</li>
+    <li>We’re not therapists. If you’re in crisis, contact local emergency services or a crisis line.</li>
+  </ol>
+</div></section>
+
+<section id="listen" class="band"><div class="wrap">
+  <h2>Listen and watch</h2>
+  <p class="sub">New episodes and videos are always free.</p>
+  <div class="links" id="media-links"></div>
+</div></section>
+
+<section id="subscribe"><div class="wrap">
+  <h2>Get the free newsletter</h2>
+  <p class="sub">One practical idea in your inbox each week. Unsubscribe any time.</p>
+  <form id="sub-form">
+    <input type="text" id="sub-name" placeholder="First name" autocomplete="given-name" aria-label="First name">
+    <input type="email" id="sub-email" placeholder="you@example.com" autocomplete="email" required aria-label="Email address">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+  <p class="note" id="sub-note"></p>
+</div></section>
+</main>
+
+<footer class="wrap"><span id="foot"></span> <a id="main-link" href="#"></a></footer>
+
+<script>
+// EDIT THIS BLOCK. Leave a url as "" and that button shows as "coming soon".
+var CONFIG={
+  brand:"Sinners 2 Saints",
+  names:"Auzzy (Duece) & Kylen",
+  contactEmail:"hello@example.com",
+  newsletterUrl:"",
+  mainSiteUrl:"",
+  perks:[
+    {t:"Weekly newsletter",d:"One practical idea each week, straight to your inbox."},
+    {t:"Community chat",d:"Talk with other members, share wins, and ask questions."},
+    {t:"New episode alerts",d:"Hear first when a new podcast or vlog goes live."},
+    {t:"Open Q&As",d:"Send in your questions for us to answer on the show."}
+  ],
+  join:[
+    {label:"Join our Discord",url:""},{label:"Join the WhatsApp group",url:""},{label:"Join the Facebook group",url:""},{label:"Follow on Instagram",url:""}
+  ],
+  media:[
+    {label:"Podcast on Spotify",url:""},{label:"Podcast on Apple Podcasts",url:""},{label:"Vlog on YouTube",url:""}
+  ]
+};
+function $(i){return document.getElementById(i)}
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+function linkItem(item){
+  if(item.url){var a=el("a",null,item.label);a.href=item.url;a.target="_blank";a.rel="noopener";return a}
+  return el("span",null,item.label+" (coming soon)");
+}
+$("brand").textContent=CONFIG.brand;
+$("foot").textContent="© 2026 "+CONFIG.names+" · "+CONFIG.contactEmail+" ·";
+var ml=$("main-link");ml.textContent="Main site";if(CONFIG.mainSiteUrl){ml.href=CONFIG.mainSiteUrl}else{ml.removeAttribute("href");ml.style.opacity=".6";ml.textContent="Main site (coming soon)"}
+CONFIG.perks.forEach(function(s){var c=el("div","card");c.appendChild(el("h3",null,s.t));c.appendChild(el("p",null,s.d));$("perks-grid").appendChild(c)});
+CONFIG.join.forEach(function(m){$("join-links").appendChild(linkItem(m))});
+CONFIG.media.forEach(function(m){$("media-links").appendChild(linkItem(m))});
+$("sub-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var n=$("sub-name").value.trim(),m=$("sub-email").value.trim();
+  if(CONFIG.newsletterUrl){window.open(CONFIG.newsletterUrl,"_blank","noopener");return}
+  var body="Please add me to the newsletter.%0D%0AName: "+encodeURIComponent(n)+"%0D%0AEmail: "+encodeURIComponent(m);
+  location.href="mailto:"+CONFIG.contactEmail+"?subject="+encodeURIComponent("Newsletter signup")+"&body="+body;
+  $("sub-note").textContent="Your email app should open with a signup message. Send it to finish subscribing.";
+});
+</script>
+</body>
+</html>
